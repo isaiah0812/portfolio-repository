@@ -11,12 +11,27 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .header-menu{
+            color : white;
+        }
+
+        .header-menu:hover{
+            color : dodgerblue;
+            background-color: whitesmoke;
+        }
+    </style>
     <title>Title</title>
 </head>
 <body>
-    <div class="container">
-        <h1>We got some words here</h1>
-        <p>There's some more words here, but they're small</p>
+    <div class="container" style="background-color:black">
+        <h1 align="center" style="color:ghostwhite">Isaiah Bullard</h1>
+        <h4 align="center" style="color:darkgrey">There's some more words here, but they're small</h4>
+        <menu align="center">
+            <component class="header-menu"><h4>Home</h4></component>
+            <component class="header-menu"><a href="https://www.soundcloud.com/isaiah_bullard" target="_blank"><h4>Music</h4></a></component>
+        </menu>
     </div>
 </body>
 </html>
