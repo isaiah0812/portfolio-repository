@@ -12,6 +12,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <script>
+        function pageLoaded() {
+            var t = document.querySelectorAll(".content");
+            var i = 0;
+
+            while(i < t.length){
+                t.item(i).style.opacity = 1;
+                i++;
+            }
+        }
+        window.onload = pageLoaded;
+    </script>
+
     <title>Isaiah Bullard</title>
     <style>
         body {
@@ -20,6 +33,10 @@
         }
         .resume{
             padding:50px;
+        }
+        .content{
+            opacity:0;
+            transition:1500ms;
         }
         .navbar-inverse{
             background-color:darkblue;
@@ -35,7 +52,7 @@
         #Skills {
             background:url("../media/Zae_and_Neil.png") no-repeat center top fixed;
             background-size: cover;
-            color:white;
+            color:black;
         }
         #Work {
             background:url("../media/Suit.png") no-repeat center top fixed;
@@ -68,38 +85,40 @@
 </nav>
 <div class="container-fluid resume" id="Overview">
     <div id="Header" class="row">
-        <div class="col-sm-6" style="padding-top:25px">
-            <h1 align="right">Isaiah Bullard</h1>
-            <h3 align="right">3<sup><u>rd</u></sup> year Computer Science Student</h3>
+        <div class="col-sm-6" style="padding-top:50px;padding-right:75px;padding-bottom:25px">
+            <h1 class="content" align="right">Isaiah Bullard</h1>
+            <h2 class="content" align="right">3<sup><u>rd</u></sup> year Computer Science Student</h2>
         </div>
-        <div class="col-sm-6">
-            <img src="../media/Headshot.JPG" alt="Isaiah's Headshot" width="200" height="200"/>
+        <div class="col-sm-6" style="padding-left:75px;padding-top:25px;padding-bottom:25px">
+            <img class="content" src="../media/Headshot.JPG" alt="Isaiah's Headshot" width="200" height="200"/>
         </div>
     </div>
-    <p align="center">A third-year student at Baylor
-        University, experienced with multiple
-        object-oriented programming
-        languages dealing with certain
-        techniques such as polymorphism,
-        memory allocation, database design
-        and application, and software analysis
-        and design. Interested in an internship
-        or employment that will allow me to
-        utilize these skills and expand my
-        knowledge in software engineering
-        and computer science.
-    </p>
+    <div class="container-fluid" style="background:rgba(105, 105, 105, 0.5); padding:10px">
+        <p class="content" align="center">A third-year student at Baylor
+            University, experienced with multiple
+            object-oriented programming
+            languages dealing with certain
+            techniques such as polymorphism,
+            memory allocation, database design
+            and application, and software analysis
+            and design. Interested in an internship
+            or employment that will allow me to
+            utilize these skills and expand my
+            knowledge in software engineering
+            and computer science.
+        </p>
+    </div>
     <div class="row">
         <div class="col-sm-6" align="right" style="background:rgba(64,64,64,0.7)">
-            <h4><u>Personal Information:</u></h4>
-            <p>Permanent Address: 502 Bellaire Oaks Drive, Pflugerville, TX, 78660<br/>
+            <h3 class="content"><u>Personal Information:</u></h3>
+            <p class="content">Permanent Address: 502 Bellaire Oaks Drive, Pflugerville, TX, 78660<br/>
                 Current Address: 805 S 8<sup>th</sup> Street Apt. 108, Waco, TX, 76706<br/>
                 Phone Number: (512) 241-9507<br/>
                 Email Address: <a href="mailto:isaiah0812@yahoo.com" style="color:white">isaiah0812@yahoo.com</a></p>
         </div>
         <div class="col-sm-6" style="background:rgba(80,80,80,0.7)">
-            <h4><u>Education</u></h4>
-            <p><b>Baylor University</b><br/>
+            <h3 class="content"><u>Education</u></h3>
+            <p class="content"><b>Baylor University</b><br/>
                 Waco, TX<br/>
                 Bachelor of Sciences in Computer Science<br/>
                 <i><strong>Expected Graduation May 2020</strong></i></p>
@@ -107,20 +126,20 @@
     </div>
 </div>
 <div class="container-fluid resume" id="Skills">
-    <div style="background-color:rgba(255, 255, 255, 0.5); padding:20px">
-        <h2>Skill & Interests</h2>
+    <div style="background-color:rgba(255, 255, 255, 0.65); padding:20px">
+        <h1 class="content" align="center">Skill & Interests</h1>
         <div class="row">
             <div class="col-sm-3">
-                <h4><u>Programming Experience</u></h4>
-                <p><strong>500+ Lines:</strong><br/>
+                <h4 class="content"><u>Programming Experience</u></h4>
+                <p class="content"><strong>500+ Lines:</strong><br/>
                     <img src="../media/cpp_logo.png" width="44" height="50" alt="C++ Logo"/>
                     <img src="../media/java_logo.png" width="50" height="50" alt="Java Logo"/>
                     <img src="../media/c_logo.png" width="50" height="50" alt="C Logo"/>
                     <img src="../media/html_logo.png" width="50" height="50" alt="HTML Logo"/>
                     <img src="../media/css_logo.png" width="35" height="50" alt="CSS_Logo"/>
                 </p>
-                <p><strong>Less than 500 Lines</strong>
-                <ul>
+                <p class="content"><strong>Less than 500 Lines</strong>
+                <ul class="content">
                     <li>JavaScript</li>
                     <li>Linux/Unix (Bash Scripting)</li>
                     <li>Python</li>
@@ -128,12 +147,16 @@
                     <li>PHP</li>
                     <li>LaTex</li>
                     <li>C#</li>
+                    <li>Bootstrap</li>
+                    <li>React.js</li>
+                    <li>Elasticsearch</li>
+                    <li>Assembly</li>
                 </ul>
                 </p>
             </div>
             <div class="col-sm-3">
-                <h4><u>Tools</u></h4>
-                <div>
+                <h4 class="content"><u>Tools</u></h4>
+                <div class="content">
                     <strong>IDEs and Interfaces</strong>
                     <ul id="IDE_List" title="IDEs and Interfaces">
                         <li>Eclipse</li>
@@ -144,15 +167,16 @@
                         <li>MySQL Workbench</li>
                     </ul>
                 </div>
-                <div>
+                <div class="content">
                     <strong>Frameworks</strong>
                     <ul id="Framework_List" title="Frameworks">
                         <li>Git</li>
                         <li>Maven</li>
                         <li>Gradle</li>
+                        <li>Spring</li>
                     </ul>
                 </div>
-                <div>
+                <div class="content">
                     <strong>Other</strong>
                     <ul id="Other_List" title="Other">
                         <li>JUnit Testing</li>
@@ -164,8 +188,8 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <h4><u>Other Skills</u></h4>
-                <div>
+                <h4 class="content"><u>Other Skills</u></h4>
+                <div class="content">
                     <ul id="Skills_LIst">
                         <li>Attention to Detail</li>
                         <li>Problem Solving</li>
@@ -176,8 +200,8 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <h4><u>Interests & Activities</u></h4>
-                <div>
+                <h4 class="content"><u>Interests & Activities</u></h4>
+                <div class="content">
                     <ul id="Interest_List">
                         <li>Database Management</li>
                         <li>Software Design</li>
@@ -193,9 +217,9 @@
     </div>
 </div>
 <div class="container-fluid resume" id="Work">
-    <h2>Work Experience</h2>
+    <h1 class="content" align="center">Work Experience</h1>
     <table class="table table-striped" style="background-color:rgba(80,80,80,0.5);">
-        <thead>
+        <thead class="content">
         <tr>
             <th>Position</th>
             <th>Employer</th>
@@ -204,7 +228,7 @@
             <th>Responsibilities</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="content">
         <tr>
             <td><i>Enrollment Agent</i></td>
             <td><i>IDEMIA</i></td>
@@ -280,7 +304,7 @@
     </table>
 </div>
 <div class="container-fluid resume" id="Projects">
-    <h2>Personal Projects</h2>
+    <h1 class="content" align="center">Projects and Other Interests</h1>
 
 </div>
 </body>
